@@ -1,0 +1,56 @@
+{
+  "name": "pocket-stage",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "render:local": "node scripts/render-local.mjs",
+    "test:data": "vitest run tests/data.test.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src tests scripts eslint.config.js vite.config.ts",
+    "test": "vitest run",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\" --single-quote",
+    "check:frontend": "node scripts/frontend-check.mjs"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.8.2",
+    "@remotion/player": "4.0.543",
+    "@remotion/three": "4.0.543",
+    "@remotion/web-renderer": "4.0.543",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.543",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.1",
+    "@remotion/bundler": "4.0.543",
+    "@remotion/cli": "4.0.543",
+    "@remotion/renderer": "4.0.543",
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@types/three": "0.180.0",
+    "@vitejs/plugin-react": "5.1.1",
+    "eslint": "9.39.1",
+    "fake-indexeddb": "^6.2.4",
+    "globals": "16.5.0",
+    "playwright": "1.56.1",
+    "prettier": "3.6.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.48.0",
+    "vite": "7.2.2",
+    "vitest": "^3.2.4"
+  },
+  "description": "Turn one to three screenshots into a directed twelve-second product film, rendered in your browser.",
+  "engines": {
+    "node": "^22.12.0 || ^24.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PeytonR72/pocket-stage.git"
+  }
+}
